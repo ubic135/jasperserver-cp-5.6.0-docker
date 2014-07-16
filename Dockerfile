@@ -1,7 +1,7 @@
 FROM platformer/tomcat7
 MAINTAINER Janaka Wickramasinghe <janaka.w@platformer.com>
 
-RUN sed -i 's/archive.ubuntu.com/mirror.orionvm.com.au/g' /etc/apt/sources.list
+#RUN sed -i 's/archive.ubuntu.com/mirror.orionvm.com.au/g' /etc/apt/sources.list
 RUN apt-get -qq update
 RUN apt-get -qqy install unzip
 
