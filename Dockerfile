@@ -13,6 +13,7 @@ RUN chmod +x /usr/local/bin/install_jasper_5.6.0.sh
 WORKDIR /tmp
 ADD jasperreports-server-cp-5.6.0-bin.zip /tmp/jasperreports-server-cp-5.6.0-bin.zip
 RUN unzip /tmp/jasperreports-server-cp-5.6.0-bin.zip
+RUN /bin/rm /tmp/jasperreports-server-cp-5.6.0-bin.zip
 ADD default_master.properties /tmp/jasperreports-server-cp-5.6.0-bin/buildomatic/default_master.properties
 
 CMD ["/usr/local/bin/jasper_5.6.0-start.sh"]
